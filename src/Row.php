@@ -56,10 +56,8 @@ class Row
      *
      * @return array
      */
-    public function toArray($nullValue = null, $calculateFormulas = false, $formatData = true)
-    {
+    public function toArray($nullValue = null, $calculateFormulas = false, $formatData = true) {
         $cells = [];
-
         $i = 0;
         foreach ($this->row->getCellIterator() as $cell) {
             $value = (new Cell($cell))->getValue($nullValue, $calculateFormulas, $formatData);
@@ -73,12 +71,9 @@ class Row
                 }
             } else {
                 $cells[] = $value;
-         }
-
+            }
             $i++;
         }
-
-
         return $cells;
     }
 
