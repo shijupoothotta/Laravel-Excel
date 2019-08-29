@@ -63,7 +63,7 @@ class Row
         $i = 0;
         foreach ($this->row->getCellIterator() as $cell) {
             $value = (new Cell($cell))->getValue($nullValue, $calculateFormulas, $formatData);
-
+            // Changes for Puma
             if (isset($this->headingRow[$i])) {
                 if (isset($cells[$this->headingRow[$i]])) {
                     $ind = $this->headingRow[$i] . "_1";
